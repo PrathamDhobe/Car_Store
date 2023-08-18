@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    /* scroll-padding-top: 2rem; */
+}
+
+.page{
+    margin: 0;
+    padding: 30px;
+    width:auto;
+    text-align:center;
+    padding-top: 22px;
+}
+.back-btn{
+    background: #f8ed62;
+    color: black;
+    font-weight: 500;
+    border-radius: .5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: .6rem 2rem;
+    text-decoration: none;
+    text-align: center;
+    position: absolute;
+    top: 22px;
+    left: 22px;
+}
+.back-btn:hover{
+    background: #f9d806;
+}
+   
+img {
+    max-width: 70%;
+    height: auto;
+    border-radius:1rem;
+    
+}
+.page-title{
+    padding-top: 20px;
+    align-items:center ;
+    font-size: 2rem;
+}
+ .des{
+    align-items:center;
+    color: #666;
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    background: #f8ed62;
+    color: black;
+    font-weight: 500;
+    font-size: 1.2rem;
+    cursor: pointer;
+    /* top and bottom padding is .8rem
+    and the left and right padding is 3rem. */
+    padding: .6rem 2rem;
+    text-decoration: none;
+}
+.btn:hover{
+    background: #f9d806;
+}
+
+
+
+
+@media(max-width:1112px){
+    .back-btn{
+     display: none;
+    }
+}
+
+@media(max-width:450px){
+    img {
+        max-width: 90%;
+        height: auto; 
+    }
+
+}
+@media(max-width:991px){
+    img {
+        max-width: 100%;
+        height: auto; 
+    }
+}
+@media(max-width:1111px){
+    img {
+        max-width: 90%;
+        height: auto; 
+    }
+}
