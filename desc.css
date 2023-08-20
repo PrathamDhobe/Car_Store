@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+:root {
+  --yellow: #f9d806;
+  --light-yellow: #f8ed62;
+  --black: #130f40;
+  --light-color: #666;
+  --border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 7rem;
+  scroll-behavior: smooth;
+}
+
+/* logo and menu bar editing starts */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  /* to separate logo and navbar */
+  justify-content: space-between;
+  /* space from top  */
+  padding: 3rem 9%;
+}
+.header .logo {
+  font-size: 2.5rem;
+  color: var(--black);
+  /* for making the text bold */
+  font-weight: bolder;
+}
+.header .logo span {
+  color: var(--yellow);
+}
+.header .navbar {
+  font-size: 1.7rem;
+  /* top bottom is 0 and from left and right it is 1 */
+  margin: 0 1rem;
+  color: var(--black);
+}
+.header .navbar a {
+  font-size: 1.7rem;
+  /* for giving the space between each element in navbar */
+  margin: 0 1rem;
+  color: var(--black);
+}
+.header .navbar a:hover {
+  color: var(--yellow);
+}
+
+section {
+  padding: 2rem 9%;
+}
+
+/* button editing starts*/
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  /* text background color */
+  background: var(--light-yellow);
+  /* text color */
+  color: var(--black);
+  font-weight: 500;
+  font-size: 1.7rem;
+  cursor: pointer;
+  /* top and bottom padding is .8rem
+    and the left and right padding is 3rem. */
+  padding: 0.8rem 3rem;
+}
+.btn:hover {
+  background: var(--yellow);
+}
+
+.header .btn {
+  margin-top: 0;
+}
+
+.header #login-btn i {
+  font-size: 2.5rem;
+  color: var(--light-color);
+  cursor: pointer;
+  display: none;
+}
+
+#menu-btn {
+  font-size: 2.5rem;
+  color: var(--light-color);
+  cursor: pointer;
+  display: none;
+}
+
+body {
+  height: 300rem;
+}
+
+.header.active {
+  box-shadow: var(--box-shadow);
+  padding: 2rem 9%;
+}
+
+/*  */
+.big {
+  margin-top: 120px;
+}
+
+.car-container {
+  display: flex;
+  /* padding-top: 20px; */
+  /* flex-wrap: wrap; */
+  /* justify-content: center; */
+  align-items: center;
+  margin: 30px;
+  /* background-color: #f2f2f2; */
+}
+
+.car-photo {
+  max-width: 400px;
+  height: auto;
+  /* border: 2px solid #333; */
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin-right: 50px;
+}
+
+.car-description {
+  flex: 1;
+  /* margin-bottom: 20px; */
+}
+
+h1 {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 15px;
+}
+
+li {
+  font-size: 14px;
+}
+
+.purchase-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.purchase-button:hover {
+  background-color: #0056b3;
+}
+
+/* footer starts */
+.footer {
+  background: var(--light-yellow);
+}
+.footer .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+}
+
+.footer .box-container .box h3 {
+  color: var(--black);
+  font-size: 2.2rem;
+  padding: 1rem 0;
+}
+.footer .box-container .box a {
+  color: var(--light-color);
+  font-size: 1.4rem;
+  display: block;
+  padding: 1rem 0;
+}
+
+.footer .box-container .box a i {
+  padding-right: 0.5rem;
+  color: var(--black);
+}
+
+.footer .box-container .box a:hover i {
+  padding-right: 2rem;
+}
+
+.footer .credit {
+  text-align: center;
+  border-top: var(--border);
+  padding: 1rem;
+  padding-top: 2.5rem;
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 2rem;
+  }
+  .header.active {
+    padding: 2rem;
+  }
+  section {
+    padding: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  #menu-btn {
+    display: block;
+  }
+  #menu-btn .fa-times {
+    transform: rotate(180deg);
+  }
+
+  .header #login-btn i {
+    display: block;
+  }
+  /* once the width matches the icon will be displayed */
+  .header #login-btn .btn {
+    display: none;
+  }
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: var(--border);
+    /* hide the menus */
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  .header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .header .navbar a {
+    display: block;
+    margin: 2rem;
+    font-size: 2rem;
+  }
+  .car-container {
+    margin-top: 3rem;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .big {
+    margin-top: 90px;
+  }
+  .car-photo {
+    max-width: 350px;
+    align-items: center;
+    margin: 0;
+  }
+
+  .car-description {
+    flex: 1;
+    align-items: center;
+    margin-right: 130px;
+  }
+  .purchase-button {
+    margin-top: 5px;
+  }
+  .car-container {
+    margin: 40px;
+  }
+}

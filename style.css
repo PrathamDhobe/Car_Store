@@ -1,0 +1,610 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+:root {
+  --yellow: #f9d806;
+  --light-yellow: #f8ed62;
+  --black: #130f40;
+  --light-color: #666;
+  --border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 7rem;
+  scroll-behavior: smooth;
+}
+
+/* logo and menu bar editing starts */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  /* to separate logo and navbar */
+  justify-content: space-between;
+  /* space from top  */
+  padding: 3rem 9%;
+}
+.header .logo {
+  font-size: 2.5rem;
+  color: var(--black);
+  font-weight: bolder;
+}
+.header .logo span {
+  color: var(--yellow);
+}
+.header .navbar {
+  font-size: 1.7rem;
+  margin: 0 1rem;
+  color: var(--black);
+}
+.header .navbar a {
+  font-size: 1.7rem;
+  /* for giving the space between each element in navbar */
+  margin: 0 1rem;
+  color: var(--black);
+}
+.header .navbar a:hover {
+  color: var(--yellow);
+}
+
+section {
+  padding: 2rem 9%;
+}
+
+/* button editing starts*/
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  /* text background color */
+  background: var(--light-yellow);
+  /* text color */
+  color: var(--black);
+  font-weight: 500;
+  font-size: 1.7rem;
+  cursor: pointer;
+  padding: 0.8rem 3rem;
+}
+.btn:hover {
+  background: var(--yellow);
+}
+
+.header .btn {
+  margin-top: 0;
+}
+
+.header #login-btn i {
+  font-size: 2.5rem;
+  color: var(--light-color);
+  cursor: pointer;
+  display: none;
+}
+
+#menu-btn {
+  font-size: 2.5rem;
+  color: var(--light-color);
+  cursor: pointer;
+  display: none;
+}
+
+body {
+  height: 300rem;
+}
+
+.header.active {
+  box-shadow: var(--box-shadow);
+  padding: 2rem 9%;
+}
+/* login form editing */
+.login-form-container {
+  position: fixed;
+  /* form will opens from top */
+  top: -105%;
+  left: 0;
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+/* when user click on login btn login form will display */
+.login-form-container.active {
+  top: 0;
+  opacity: 1;
+}
+
+.login-form-container form {
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  background: #fff;
+  border: var(--border);
+  text-align: center;
+  width: 40rem;
+}
+.login-form-container form .buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.login-form-container form .btn {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+.login-form-container form h3 {
+  color: var(--black);
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+}
+.login-form-container form .box {
+  margin: 0.7rem 0;
+  width: 100%;
+  text-transform: none;
+  color: var(--black);
+  font-size: 1.6rem;
+  padding: var(--border);
+  border-radius: 0.5rem;
+}
+.login-form-container form p {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  color: var(--light-color);
+}
+.login-form-container form p a {
+  color: var(--yellow);
+  text-decoration: underline;
+}
+
+.login-form-container #close-login-form {
+  position: absolute;
+  top: 1.5rem;
+  right: 2.5rem;
+  font-size: 5rem;
+  color: var(--black);
+  cursor: pointer;
+}
+/* home section starts */
+.home {
+  padding-top: 10rem;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.home h1 {
+  font-size: 3.5vw;
+  color: var(--black);
+  font-weight: bolder;
+  padding-top: 2rem;
+}
+.home .discription {
+  color: var(--black);
+  font-size: 1.5rem;
+  padding-top: 3rem;
+  text-align: center;
+}
+.home img {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.icons-container {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  display: grid;
+  /* to make horizontally */
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+  background: #fff;
+}
+
+.icons-container .icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: #fff;
+  /* for shadow */
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
+}
+
+.icons-container .icons i {
+  height: 6rem;
+  width: 6rem;
+  line-height: 6rem;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  background: #eee;
+  color: var(--black);
+  text-align: center;
+}
+
+.icons-container .icons .content h3 {
+  color: var(--yellow);
+  font-size: 2.5rem;
+}
+
+.icons-container .icons .content p {
+  /* change this color */
+  color: var(--yellow);
+  font-size: 1.5rem;
+}
+.icons-container .icons .content:hover p {
+ 
+  font-size: 1.5rem;
+}
+
+.icons-container .icons:hover {
+  background: #006400;
+}
+
+/* vehicle section */
+
+.heading {
+  text-align: center;
+  padding-bottom: 2rem;
+  font-size: 4.5rem;
+  color: var(--black);
+}
+.heading span {
+  position: relative;
+  z-index: 0;
+}
+
+/* vehicles and its prices slider */
+.vehicles .vehicles-slider {
+  padding-bottom: 5rem;
+}
+.vehicles .vehicles-slider .box {
+  text-align: center;
+}
+.vehicles .vehicles-slider .box img {
+  width: 100%;
+  border-radius: 2rem;
+}
+.vehicles .vehicles-slider .box .content {
+  padding-top: 1rem;
+}
+.vehicles .vehicles-slider .box .content h3 {
+  font-size: 2.5rem;
+  color: var(--black);
+}
+.vehicles .vehicles-slider .box .content .price {
+  font-size: 2.5rem;
+  color: var(--yellow);
+  padding: 1rem 0;
+  font-weight: bolder;
+}
+
+.vehicles .vehicles-slider .box .content .price span {
+  font-size: 1.7rem;
+  color: var(--light-color);
+  font-weight: normal;
+}
+.vehicles .vehicles-slider .box .content p {
+  font-size: 1.6rem;
+  padding: 1rem;
+  padding-top: 1.5rem;
+  border-top: var(--border);
+  color: var(--light-color);
+}
+.vehicles .vehicles-slider .box .content p span {
+  color: var(--yellow);
+  font-size: 0.8rem;
+  padding: 0 0.5rem;
+}
+
+/* services editing */
+.services .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1.2fr));
+  /* for gap between each services */
+  gap: 2rem;
+  padding-bottom: 3rem;
+}
+
+.services .box-container .box {
+  text-align: center;
+  padding: 3rem;
+  border-radius: 2rem;
+  box-shadow: var(--box-shadow);
+  border: var(--border);
+}
+
+.services .box-container .box i {
+  height: 6rem;
+  width: 6rem;
+  line-height: 6rem;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  background: var(--yellow);
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+.services .box-container .box h3 {
+  color: var(--black);
+  font-size: 2.2rem;
+}
+
+.services .box-container .box p {
+  color: var(--light-color);
+  font-size: 1.2rem;
+ 
+}
+
+.services .box-container .box:hover {
+  background-color: #006400;
+}
+
+.services .box-container .box:hover h3 {
+  color: #fff;
+}
+
+.services .box-container .box:hover p {
+  color: #fff;
+}
+
+/* newsletter starts */
+.newsletter {
+  padding: 6rem 2rem;
+  text-align: center;
+  background: url(subscribe.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.newsletter h3 {
+  color: var(--black);
+  font-size: 3rem;
+}
+.newsletter p {
+  color: var(--light-color);
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+.newsletter form {
+  margin: 1rem auto;
+  max-width: 60rem;
+  height: 5rem;
+  display: flex;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  /* for curve edges  */
+  border-radius: 5rem;
+}
+.newsletter form input[type="email"] {
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  color: var(--black);
+  text-transform: none;
+  padding: 0 2rem;
+}
+
+.newsletter form input[type="submit"] {
+  height: 100%;
+  width: 17rem;
+  font-size: 1.7rem;
+  color: var(--black);
+  background: var(--light-yellow);
+  cursor: pointer;
+}
+.newsletter form input[type="submit"]:hover {
+  background: var(--yellow);
+}
+
+/* review section editing */
+.reviews .reviews-slider {
+  padding-bottom: 3rem;
+}
+
+.reviews .reviews-slider .box {
+  padding: 2rem;
+  margin: 2rem 0;
+  text-align: center;
+  border-radius: 2rem;
+  box-shadow: var(--box-shadow);
+  border: var(--border);
+}
+
+.reviews .reviews-slider .box img {
+  height: 12rem;
+  width: 12rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.reviews .reviews-slider .box .content p {
+  font-size: 1.4rem;
+  color: var(--light-color);
+  padding: 1rem 0;
+}
+.reviews .reviews-slider .box .content h3 {
+  font-size: 2.2rem;
+  color: var(--black);
+}
+
+.reviews .reviews-slider .box .content .stars i {
+  font-size: 1.7rem;
+  color: var(--yellow);
+}
+
+/* contact form editing */
+.contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.contact .row .map {
+  flex: 1 1 42rem;
+  width: 100%;
+  border: var(--border);
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+}
+.contact .row form {
+  flex: 1 1 42rem;
+  padding: 2rem;
+  border: var(--border);
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+}
+.contact .row form h3 {
+  font-size: 3rem;
+  color: var(--black);
+}
+
+.contact .row form .box {
+  margin: 0.7rem 0;
+  width: 100%;
+  border: var(--border);
+  padding: 1rem;
+  font-size: 1.6rem;
+  color: var(--black);
+  text-transform: none;
+  border-radius: 0.5rem;
+}
+
+.contact .row form textarea {
+  height: 15rem;
+  /* to avoid the text box from resizing */
+  resize: none;
+}
+
+/* footer starts */
+.footer {
+  background: var(--light-yellow);
+}
+.footer .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+}
+
+.footer .box-container .box h3 {
+  color: var(--black);
+  font-size: 2.2rem;
+  padding: 1rem 0;
+}
+.footer .box-container .box a {
+  color: var(--light-color);
+  font-size: 1.4rem;
+  display: block;
+  padding: 1rem 0;
+}
+
+.footer .box-container .box a i {
+  padding-right: 0.5rem;
+  color: var(--black);
+}
+
+.footer .box-container .box a:hover i {
+  padding-right: 2rem;
+}
+
+.footer .credit {
+  text-align: center;
+  border-top: var(--border);
+  padding: 1rem;
+  padding-top: 2.5rem;
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+
+/* media query  */
+/* media query for navigation bar */
+/* changes size according to width */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 2rem;
+  }
+  .header.active {
+    padding: 2rem;
+  }
+  section {
+    padding: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  #menu-btn {
+    display: block;
+  }
+  #menu-btn .fa-times {
+    transform: rotate(180deg);
+  }
+
+  .header #login-btn i {
+    display: block;
+  }
+  /* once the width matches the icon will be displayed */
+  .header #login-btn .btn {
+    display: none;
+  }
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: var(--border);
+    /* hide the menus */
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  .header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .header .navbar a {
+    display: block;
+    margin: 2rem;
+    font-size: 2rem;
+  }
+}
+/* changes size according to width */
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .home .discription {
+    font-size: 1rem;
+  }
+  .home h1 {
+    font-size: 4vw;
+    padding-top: 2rem;
+  }
+  .newsletter {
+    padding: 4rem 4rem;
+  }
+  .services .box-container {
+    padding-bottom: 0.9rem;
+  }
+}

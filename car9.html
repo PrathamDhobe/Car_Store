@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details Page</title>
+    <link rel="shortcut icon" type="x-icon" href="tyre.png" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  /* scroll-padding-top: 2rem; */
+}
+
+.page {
+  margin: 0;
+  padding: 30px;
+  width: auto;
+  text-align: center;
+  padding-top: 25px;
+}
+.back-btn {
+  background: #f8ed62;
+  color: black;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.6rem 2rem;
+  text-decoration: none;
+  text-align: center;
+  position: absolute;
+  top: 22px;
+  left: 22px;
+}
+.back-btn:hover {
+  background: #f9d806;
+}
+
+img {
+  max-width: 70%;
+  height: auto;
+  border-radius: 1rem;
+}
+.page-title {
+  padding-top: 20px;
+  align-items: center;
+  font-size: 2rem;
+}
+.des {
+  align-items: center;
+  color: #666;
+  margin: 1rem 12rem;
+}
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  background: #f8ed62;
+  color: black;
+  font-weight: 500;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.6rem 2rem;
+  text-decoration: none;
+  margin-left: 42%;
+  margin-bottom: 15px;
+}
+.btn:hover {
+  background: #f9d806;
+}
+
+.fea {
+  align-items: center;
+  margin-left: 40rem;
+  margin-bottom: 1rem;
+  margin-top: 0.1rem;
+}
+.fea ul li {
+  margin-bottom: 5px;
+}
+.fea h3{
+    font-weight: 400px;
+    margin-bottom: 3px;
+    text-decoration: underline;
+   font-size: 1.3rem;
+}
+
+/* media queries */
+@media (max-width: 1112px) {
+  .back-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  img {
+    max-width: 90%;
+    height: auto;
+  }
+}
+@media (max-width: 991px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 1111px) {
+  img {
+    max-width: 90%;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .fea {
+    align-items: center;
+    margin-left: 5rem;
+  }
+  .btn {
+    margin-left: 30%;
+  }
+  .des {
+    align-items: center;
+    color: #666;
+    margin: 0;
+    margin-top: 1rem;
+  }
+}
+
+</style>
+<body>
+    <section class="page" id="page">
+        <img id="carImage" src="car9.jpg"  alt="" class="img">
+        <h1 class="page-title">Model 6</h1>
+        <h2>Price: $75000/-</h2>
+        <p class="des">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque incidunt, unde suscipit architecto officiis distinctio nisi. Nostrum odio et adipisci.</p>
+    </section>
+
+    <div class="fea">
+        <h3>Features :</h3>
+        <ul class="list">
+            <li>Powerful Engine</li>
+            <li> Luxurious Interior</li>
+            <li>High-Tech Infotainment</li>
+            <li>Advanced Safety System</li>
+            <li>Magic Sky Control</li>
+            <li>Airmatic Suspension</li>
+            <li>Advanced Driver Assistance Systems</li>
+            <li>Adaptive Highbeam Assis</li>
+            <li>And Many More. . . .</li>
+        </ul>
+    </div>
+
+    <a href="#" class="btn">Check out</a>
+
+</body>
+</html>
